@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Proxies\ShopifyProxy\ShopifyProxyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('HomePage');
+
+Route::middleware('redirect.home')->group(function () {
+    $appDomain = env('APP_DOMAIN');
+
+    Route::domain("{apiKey}.{apiSecret}.{shopUrl}.shopify.{$appDomain}")->group(function () {
+        Route::any('admin', [ShopifyProxyController::class, 'forward'] );
+    });
 });

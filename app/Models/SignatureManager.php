@@ -6,7 +6,11 @@ use App\Interfaces\CanVerifyRequest;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+use Spatie\Crypto\Rsa\PublicKey;
+use Spatie\Crypto\Rsa\PrivateKey;
 use App\Interfaces\CanProvideRequestDetails;
+use Spatie\Crypto\Rsa\Exceptions\FileDoesNotExist;
+
 
 class SignatureManager extends Model implements CanVerifyRequest
 {
@@ -14,21 +18,29 @@ class SignatureManager extends Model implements CanVerifyRequest
 
     /**
      * @param $storeId
-     * @return mixed
+     * @return string
      */
-    public function sign($storeId) : mixed
+    public function sign($storeId) : string
     {
-        // TODO: Implement sign() method.
-        return;
+       try {
+           return PrivateKey::fromFile('SpatieCryptoRsa.private')
+               ->encrypt($storeId);
+       } catch (FileDoesNotExist $exception) {
+           return '';
+       }
     }
 
     /**
      * @param CanProvideRequestDetails $request
-     * @return mixed
+     * @return bool
      */
-    public function verify(CanProvideRequestDetails $request) : mixed
+    public function verify(CanProvideRequestDetails $request) : bool
     {
-        // TODO: Implement verify() method.
-        return;
+        try {
+            return PublicKey::fromFile('SpatieCryptoRsa.private')
+                ->verify($request->getSignature(),'');
+        } catch (FileDoesNotExist $exception) {
+            return false;
+        }
     }
 }

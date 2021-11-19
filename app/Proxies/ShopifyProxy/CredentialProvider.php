@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Proxies\EtsyProxy;
+namespace App\Proxies\ShopifyProxy;
 
 use App\Interfaces\AuthenticationData;
 use App\Interfaces\CanProvideAccess;
