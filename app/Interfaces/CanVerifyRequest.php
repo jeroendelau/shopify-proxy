@@ -4,6 +4,13 @@ namespace App\Interfaces;
 
 interface CanVerifyRequest
 {
-    public function sign($storeId) : string;
-    public function verify(CanProvideRequestDetails $request) : bool;
+    /**
+     * @return string|null
+     */
+    public function sign() : string|null;
+
+    /**
+     * @return bool
+     */
+    public function verify() : bool;
 }

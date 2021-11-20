@@ -17,7 +17,8 @@ class CreateShopifyStoresTable extends Migration
             $table->string('id', 128);
             $table->string('shop_url', 128);
             $table->string('api_key', 128);
-            $table->string('api_secret', 128);
+            $table->string('password', 128);
+            $table->string('shared_secret', 128);
             $table->timestamps();
             $table->primary('id');
         });

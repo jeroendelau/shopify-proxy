@@ -14,7 +14,7 @@ class CreateEbayTokensTable extends Migration
     public function up()
     {
         Schema::create('ebay_tokens', function (Blueprint $table) {
-            $table->string('id'. 128);
+            $table->string('id', 128);
             $table->string('app_id', 128);
             $table->boolean('sandbox');
             $table->json('oauth_token');

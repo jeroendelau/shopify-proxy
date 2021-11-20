@@ -21,7 +21,10 @@ Route::get('/', function () {
 Route::middleware('redirect.home')->group(function () {
     $appDomain = env('APP_DOMAIN');
 
+    /**
+     * Example url: https://7ef1fccf837de463786559ffef8dd96a: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@pnzdevteststore.myshopify.com/admin/api/2021-10/shop
+     */
     Route::domain("{apiKey}.{apiSecret}.{shopUrl}.shopify.{$appDomain}")->group(function () {
-        Route::any('admin', [ShopifyProxyController::class, 'forward'] );
+        Route::any( '{path?}',[ShopifyProxyController::class, 'forward'] )->name('AnyShopifyRoute')->where('path','.*');
     });
 });

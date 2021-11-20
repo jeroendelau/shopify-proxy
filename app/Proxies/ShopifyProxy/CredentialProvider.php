@@ -2,16 +2,17 @@
 
 namespace App\Proxies\ShopifyProxy;
 
-use App\Interfaces\AuthenticationData;
+use App\Models\ShopifyStore;
 use App\Interfaces\CanProvideAccess;
+use Illuminate\Database\Eloquent\Model;
 
 class CredentialProvider implements CanProvideAccess {
     /**
      * @param string $id
-     * @return AuthenticationData|void
+     * @return Model|null
      */
-    public function getAccess(string $id): AuthenticationData
+    public function getAccess(string $id): Model|null
     {
-        // TODO: Implement getAccess() method.
+       return ShopifyStore::find($id);
     }
 }

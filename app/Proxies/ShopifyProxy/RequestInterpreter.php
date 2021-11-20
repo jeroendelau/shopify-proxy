@@ -2,8 +2,10 @@
 
 namespace App\Proxies\ShopifyProxy;
 
-use App\Interfaces\CanProvideRequestDetails;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Interfaces\CanProvideRequestDetails;
+
 
 class RequestInterpreter implements CanProvideRequestDetails {
 
@@ -17,42 +19,44 @@ class RequestInterpreter implements CanProvideRequestDetails {
         $this->request = $request;
     }
     /**
-     * @return void
+     * @return string
      */
-    public function getIdentifier()
+    public function getIdentifier() : string
     {
-        // TODO: Implement getIdentifier() method.
+        list(,,$shopId) = explode('.',$this->request->header('host'));
+        return $shopId;
     }
 
     /**
-     * @return void
+     * @return string
      */
-    public function getSignature()
+    public function getSignature() : string
     {
-        // TODO: Implement getSignature() method.
+        return $this->request->bearerToken();
     }
 
     /**
-     * @return void
+     * @return string
      */
-    public function getMethod()
+    public function getMethod() : string
     {
-        // TODO: Implement getMethod() method.
+        return $this->request->getMethod();
     }
 
     /**
-     * @return void
+     * @return string
      */
-    public function getPath()
+    public function getPath() : string
     {
-        // TODO: Implement getPath() method.
+        //return Str::remove('/api', $this->request->getRequestUri());
+        return $this->request->getRequestUri();
     }
 
     /**
-     * @return void
+     * @return array
      */
-    public function getPayload()
+    public function getPayload() : array
     {
-        // TODO: Implement getPayload() method.
+        return $this->request->all();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Interfaces\AuthenticationData;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -9,9 +10,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string id
  * @property string api_key
  * @property string shop_url
- * @property string api_secret
+ * @property string password
+ * @property string shared_secret
+ *
+ * @method static where()
+ * @method static find(string $id)
  */
-class ShopifyStore extends Model
+class ShopifyStore extends Model implements AuthenticationData
 {
     use HasFactory;
 
@@ -40,6 +45,6 @@ class ShopifyStore extends Model
      * @var string[]
      */
     protected $fillable = [
-      'id', 'shop_url', 'api_key', 'api_secret'
+      'id', 'shop_url', 'api_key', 'password', 'shared_sacred'
     ];
 }
