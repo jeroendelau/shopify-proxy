@@ -3,11 +3,11 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\ShopifyStore;
+use App\Models\EtsyToken;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ShopifyStorePolicy
+class EtsyTokenPolicy
 {
     use HandlesAuthorization;
 
@@ -26,10 +26,10 @@ class ShopifyStorePolicy
      * Determine whether the user can view the model.
      *
      * @param User $user
-     * @param ShopifyStore $shopifyStore
+     * @param EtsyToken $entsyToken
      * @return Response|bool
      */
-    public function view(User $user, ShopifyStore $shopifyStore) : Response|bool
+    public function view(User $user, EtsyToken $entsyToken) : Response|bool
     {
         return true;
     }
@@ -49,10 +49,10 @@ class ShopifyStorePolicy
      * Determine whether the user can update the model.
      *
      * @param User $user
-     * @param ShopifyStore $shopifyStore
+     * @param EtsyToken $entsyToken
      * @return Response|bool
      */
-    public function update(User $user, ShopifyStore $shopifyStore) : Response|bool
+    public function update(User $user, EtsyToken $entsyToken) : Response|bool
     {
         return true;
     }
@@ -61,10 +61,10 @@ class ShopifyStorePolicy
      * Determine whether the user can delete the model.
      *
      * @param User $user
-     * @param ShopifyStore $shopifyStore
+     * @param EtsyToken $entsyToken
      * @return Response|bool
      */
-    public function delete(User $user, ShopifyStore $shopifyStore) : Response|bool
+    public function delete(User $user, EtsyToken $entsyToken) : Response|bool
     {
         return true;
     }
@@ -73,10 +73,10 @@ class ShopifyStorePolicy
      * Determine whether the user can restore the model.
      *
      * @param User $user
-     * @param ShopifyStore $shopifyStore
+     * @param EtsyToken $entsyToken
      * @return Response|bool
      */
-    public function restore(User $user, ShopifyStore $shopifyStore) : Response|bool
+    public function restore(User $user, EtsyToken $entsyToken) : Response|bool
     {
         return true;
     }
@@ -85,10 +85,10 @@ class ShopifyStorePolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param User $user
-     * @param ShopifyStore $shopifyStore
+     * @param EtsyToken $entsyToken
      * @return Response|bool
      */
-    public function forceDelete(User $user, ShopifyStore $shopifyStore) : Response|bool
+    public function forceDelete(User $user, EtsyToken $entsyToken) : Response|bool
     {
         return true;
     }

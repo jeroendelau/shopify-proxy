@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use JetBrains\PhpStorm\ArrayShape;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory
 {

@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @property string id
  * @property string app_id
  * @property boolean sandbox
  * @property array oauth_token
+ * @method static find(string $id)
  */
 class EbayToken extends Model
 {

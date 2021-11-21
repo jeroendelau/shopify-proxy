@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Proxies\EtsyProxy;
+namespace App\Proxies\EbayProxy;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;

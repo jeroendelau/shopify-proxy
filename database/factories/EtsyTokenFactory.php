@@ -4,14 +4,14 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class EntsyTokenFactory extends Factory
+class EtsyTokenFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    public function definition()
+    public function definition() : array
     {
         return [
             //

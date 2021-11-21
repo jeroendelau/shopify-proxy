@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * @property string id
  * @property array oauth_token
+ * @method static find(string $id)
  */
-class EntsyToken extends Model
+class EtsyToken extends Model
 {
     use HasFactory;
 

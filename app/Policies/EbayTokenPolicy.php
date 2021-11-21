@@ -2,8 +2,9 @@
 
 namespace App\Policies;
 
-use App\Models\EbayToken;
 use App\Models\User;
+use App\Models\EbayToken;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class EbayTokenPolicy
@@ -13,82 +14,82 @@ class EbayTokenPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param  User  $user
+     * @return Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\EbayToken  $ebayToken
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param  User  $user
+     * @param  EbayToken  $ebayToken
+     * @return Response|bool
      */
-    public function view(User $user, EbayToken $ebayToken)
+    public function view(User $user, EbayToken $ebayToken) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can create models.
      *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param User $user
+     * @return Response|bool
      */
-    public function create(User $user)
+    public function create(User $user) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\EbayToken  $ebayToken
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param User $user
+     * @param EbayToken $ebayToken
+     * @return Response|bool
      */
-    public function update(User $user, EbayToken $ebayToken)
+    public function update(User $user, EbayToken $ebayToken) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\EbayToken  $ebayToken
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param User $user
+     * @param EbayToken $ebayToken
+     * @return Response|bool
      */
-    public function delete(User $user, EbayToken $ebayToken)
+    public function delete(User $user, EbayToken $ebayToken) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can restore the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\EbayToken  $ebayToken
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param User $user
+     * @param EbayToken $ebayToken
+     * @return Response|bool
      */
-    public function restore(User $user, EbayToken $ebayToken)
+    public function restore(User $user, EbayToken $ebayToken) : Response|bool
     {
-        //
+        return true;
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\EbayToken  $ebayToken
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @param User $user
+     * @param EbayToken $ebayToken
+     * @return Response|bool
      */
-    public function forceDelete(User $user, EbayToken $ebayToken)
+    public function forceDelete(User $user, EbayToken $ebayToken) : Response|bool
     {
-        //
+        return true;
     }
 }

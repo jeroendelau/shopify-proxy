@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Proxies\EtsyProxy;
+namespace App\Proxies\EbayProxy;
 
-use App\Models\EtsyToken;
+use App\Models\EbayToken;
 use App\Interfaces\CanProvideAccess;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +13,6 @@ class CredentialProvider implements CanProvideAccess {
      */
     public function getAccess(string $id): Model|null
     {
-       return EtsyToken::find($id);
+       return EbayToken::find($id);
     }
 }
