@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39e512980f705321377af77620418eb9",
+    "content-hash": "5e6bfd33ca7caaefb8bcda1986ff4e24",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3180,10 +3180,16 @@
         {
             "name": "stareditions/api-proxy",
             "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/petarz/PhpstormProjects/api-proxy",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:jeroendelau/api-proxy.git",
                 "reference": "b4184f406f2f0cb9d2af4753c8868ec30bea5991"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeroendelau/api-proxy/zipball/b4184f406f2f0cb9d2af4753c8868ec30bea5991",
+                "reference": "b4184f406f2f0cb9d2af4753c8868ec30bea5991",
+                "shasum": ""
             },
             "require": {
                 "ext-exif": "*",
@@ -3205,6 +3211,7 @@
                 "orchestra/testbench": "^5.20|^6.23",
                 "phpunit/phpunit": "^9.3"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3253,9 +3260,11 @@
                 "shopify",
                 "shopify proxy"
             ],
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/jeroendelau/api-proxy/tree/main",
+                "issues": "https://github.com/jeroendelau/api-proxy/issues"
+            },
+            "time": "2021-11-25T07:18:33+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

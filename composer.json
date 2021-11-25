@@ -60,10 +60,13 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "github-oauth": {
+        "github.com": "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"
+    },
     "repositories": [
         {
-            "type": "path",
-            "url": "/home/petarz/PhpstormProjects/api-proxy"
+            "type": "github",
+            "url": "https://github.com/jeroendelau/api-proxy.git"
         }
     ]
 }
