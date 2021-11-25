@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61a153208b1d1c85f8fd1e4ffce8a175",
+    "content-hash": "39e512980f705321377af77620418eb9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -958,86 +958,6 @@
                 }
             ],
             "time": "2021-10-06T17:43:30+00:00"
-        },
-        {
-            "name": "jayteamworld/proxy",
-            "version": "dev-package",
-            "dist": {
-                "type": "path",
-                "url": "./JayTeamWorldsProxy",
-                "reference": "57c0925e7cad548dd27e033bddc62c47b0cf6b9b"
-            },
-            "require": {
-                "ext-exif": "*",
-                "ext-fileinfo": "*",
-                "ext-json": "*",
-                "illuminate/console": "^8.71",
-                "illuminate/database": "^8.71",
-                "illuminate/http": "^v8.71",
-                "illuminate/support": "^8.71",
-                "paragonie/halite": "^4.8",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "doctrine/dbal": "^2.12",
-                "ext-pdo_sqlite": "*",
-                "ext-zip": "*",
-                "guzzlehttp/guzzle": "^7.0",
-                "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^5.20|^6.23",
-                "phpunit/phpunit": "^9.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "JayTeamWorlds\\Proxy\\Laravel\\ProxyServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JayTeamWorlds\\Proxy\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "JayTeamWorlds\\Proxy\\Laravel\\Tests\\": "src\\Laravel\\Tests"
-                }
-            },
-            "scripts": {
-                "format": [
-                    "vendor/bin/php-cs-fixer fix --allow-risky=yes"
-                ],
-                "test": [
-                    "vendor/bin/phpunit"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Developer Name",
-                    "email": "developer@email.com",
-                    "homepage": "https://developer.homepage.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Proxy requests to Shopify, Ebay, Etsy.",
-            "homepage": "https://github.com/jeroendelau/shopify-proxy.git",
-            "keywords": [
-                "ebay",
-                "ebay proxy",
-                "etsy",
-                "etsy proxy",
-                "proxy",
-                "shopify",
-                "shopify proxy"
-            ],
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "laravel/framework",
@@ -2003,16 +1923,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "9cd80396ca58d7969ab44fc7afcf03624dfa526e"
+                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/9cd80396ca58d7969ab44fc7afcf03624dfa526e",
-                "reference": "9cd80396ca58d7969ab44fc7afcf03624dfa526e",
+                "url": "https://api.github.com/repos/nette/utils/zipball/2f261e55bd6a12057442045bf2c249806abc1d02",
+                "reference": "2f261e55bd6a12057442045bf2c249806abc1d02",
                 "shasum": ""
             },
             "require": {
@@ -2023,7 +1943,7 @@
             },
             "require-dev": {
                 "nette/tester": "~2.0",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^1.0",
                 "tracy/tracy": "^2.3"
             },
             "suggest": {
@@ -2082,9 +2002,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.5"
+                "source": "https://github.com/nette/utils/tree/v3.2.6"
             },
-            "time": "2021-09-20T10:50:11+00:00"
+            "time": "2021-11-24T15:47:23+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3258,6 +3178,86 @@
             "time": "2021-09-25T23:10:38+00:00"
         },
         {
+            "name": "stareditions/api-proxy",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/petarz/PhpstormProjects/api-proxy",
+                "reference": "b4184f406f2f0cb9d2af4753c8868ec30bea5991"
+            },
+            "require": {
+                "ext-exif": "*",
+                "ext-fileinfo": "*",
+                "ext-json": "*",
+                "illuminate/console": "^8.71",
+                "illuminate/database": "^8.71",
+                "illuminate/http": "^v8.71",
+                "illuminate/support": "^8.71",
+                "paragonie/halite": "^4.8",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.12",
+                "ext-pdo_sqlite": "*",
+                "ext-zip": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.20|^6.23",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "StarEditions\\ApiProxy\\LaravelAdapter\\ApiProxyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StarEditions\\ApiProxy\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "StarEditions\\ApiProxy\\LaravelAdapter\\Tests\\": "src\\LaravelAdapter\\Tests"
+                }
+            },
+            "scripts": {
+                "format": [
+                    "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Developer Name",
+                    "email": "developer@email.com",
+                    "homepage": "https://developer.homepage.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Proxy requests to Shopify, Ebay, Etsy.",
+            "homepage": "https://github.com/jeroendelau/shopify-proxy.git",
+            "keywords": [
+                "ebay",
+                "ebay proxy",
+                "etsy",
+                "etsy proxy",
+                "proxy",
+                "shopify",
+                "shopify proxy"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.3.0",
             "source": {
@@ -4011,16 +4011,16 @@
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v5.3.11",
+            "version": "v5.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "cdccfda41510821c08983542e83c4b3d97357c77"
+                "reference": "f53025cd1d91b1af85d6d9e17eefa98e31ee953b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/cdccfda41510821c08983542e83c4b3d97357c77",
-                "reference": "cdccfda41510821c08983542e83c4b3d97357c77",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/f53025cd1d91b1af85d6d9e17eefa98e31ee953b",
+                "reference": "f53025cd1d91b1af85d6d9e17eefa98e31ee953b",
                 "shasum": ""
             },
             "require": {
@@ -4103,7 +4103,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v5.3.11"
+                "source": "https://github.com/symfony/http-kernel/tree/v5.3.12"
             },
             "funding": [
                 {
@@ -4119,7 +4119,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-22T14:24:23+00:00"
+            "time": "2021-11-24T08:46:46+00:00"
         },
         {
             "name": "symfony/mime",
@@ -5014,16 +5014,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.3.11",
+            "version": "v5.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "6c99204de85d04ca17f16c466fc61896960b0636"
+                "reference": "e498803a6e95ede78e9d5646ad32a2255c033a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/6c99204de85d04ca17f16c466fc61896960b0636",
-                "reference": "6c99204de85d04ca17f16c466fc61896960b0636",
+                "url": "https://api.github.com/repos/symfony/process/zipball/e498803a6e95ede78e9d5646ad32a2255c033a6a",
+                "reference": "e498803a6e95ede78e9d5646ad32a2255c033a6a",
                 "shasum": ""
             },
             "require": {
@@ -5056,7 +5056,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v5.3.11"
+                "source": "https://github.com/symfony/process/tree/v5.3.12"
             },
             "funding": [
                 {
@@ -5072,7 +5072,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-17T12:16:12+00:00"
+            "time": "2021-11-22T22:39:13+00:00"
         },
         {
             "name": "symfony/routing",
@@ -5992,16 +5992,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.16.1",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "29b533f63a3b269aa599d08dd4d22a0d720e295f"
+                "reference": "28d12b473ffcbe326959385772fd5125c73bc974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/29b533f63a3b269aa599d08dd4d22a0d720e295f",
-                "reference": "29b533f63a3b269aa599d08dd4d22a0d720e295f",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/28d12b473ffcbe326959385772fd5125c73bc974",
+                "reference": "28d12b473ffcbe326959385772fd5125c73bc974",
                 "shasum": ""
             },
             "require": {
@@ -6018,6 +6018,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.14",
+                "livewire/livewire": "^2.4",
                 "mockery/mockery": "^1.3",
                 "orchestra/testbench": "^5.0|^6.0",
                 "psalm/plugin-laravel": "^1.2"
@@ -6065,7 +6066,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-11-16T13:09:30+00:00"
+            "time": "2021-11-24T08:47:21+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -6309,16 +6310,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.12.5",
+            "version": "v1.12.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "d1c31b2c3d226e70e0071e074da69e4801f0f47b"
+                "reference": "31edbfef5c232157244564db4869fd93bc53b8ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/d1c31b2c3d226e70e0071e074da69e4801f0f47b",
-                "reference": "d1c31b2c3d226e70e0071e074da69e4801f0f47b",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/31edbfef5c232157244564db4869fd93bc53b8ce",
+                "reference": "31edbfef5c232157244564db4869fd93bc53b8ce",
                 "shasum": ""
             },
             "require": {
@@ -6365,7 +6366,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-11-16T16:55:18+00:00"
+            "time": "2021-11-23T17:35:39+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -8196,7 +8197,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
@@ -8361,11 +8361,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "stareditions/api-proxy": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"

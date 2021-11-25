@@ -11,7 +11,7 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "jayteamworld/proxy" : "*"
+        "stareditions/api-proxy": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -63,7 +63,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "./JayTeamWorldsProxy"
+            "url": "/home/petarz/PhpstormProjects/api-proxy"
         }
     ]
 }

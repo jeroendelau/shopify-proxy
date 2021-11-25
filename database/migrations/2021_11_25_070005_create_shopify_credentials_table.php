@@ -4,16 +4,16 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShopifyStoresTable extends Migration
+class CreateShopifyCredentialsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the Migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('shopify_stores', function (Blueprint $table) {
+        Schema::create('shopify_credentials', function (Blueprint $table) {
             $table->string('id', 128);
             $table->string('shop_url', 128);
             $table->string('api_key', 128);
@@ -25,12 +25,12 @@ class CreateShopifyStoresTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the Migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('shopify_stores');
+        Schema::dropIfExists('shopify_credentials');
     }
 }

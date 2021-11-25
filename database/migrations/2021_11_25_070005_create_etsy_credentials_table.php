@@ -1,19 +1,20 @@
 <?php
 
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEtsyTokensTable extends Migration
+class CreateEtsyCredentialsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the Migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('entsy_tokens', function (Blueprint $table) {
+        Schema::create('etsy_credentials', function (Blueprint $table) {
             $table->string('id', 128);
             $table->json('oauth_token');
             $table->timestamps();
@@ -22,12 +23,12 @@ class CreateEtsyTokensTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the Migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('entsy_tokens');
+        Schema::dropIfExists('etsy_credentials');
     }
 }

@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEtsyTokensTable extends Migration
+class CreateEbayCredentialsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the Migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('entsy_tokens', function (Blueprint $table) {
+        Schema::create('ebay_credentials', function (Blueprint $table) {
             $table->string('id', 128);
+            $table->string('app_id', 128);
+            $table->boolean('sandbox');
             $table->json('oauth_token');
             $table->timestamps();
             $table->primary('id');
@@ -22,12 +24,12 @@ class CreateEtsyTokensTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the Migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('entsy_tokens');
+        Schema::dropIfExists('ebay_credentials');
     }
 }
