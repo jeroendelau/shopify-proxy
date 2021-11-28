@@ -6,14 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "psr/log": "^1.1",
-        "shopify/shopify-api": "^1.0",
-        "spatie/crypto": "^2.0"
+        "stareditions/api-proxy": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -61,5 +60,9 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [{
+        "type": "github",
+        "url": "git@github.com:jeroendelau/api-proxy.git"
+    }]
 }
